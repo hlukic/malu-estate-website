@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-olive: #5C6B4F;
+  --color-olive-light: #7a8b6a;
+  --color-olive-dark: #4a5740;
+  --color-terra: #C4704E;
+  --color-terra-light: #d4896b;
+  --color-terra-dark: #a85a3a;
+  --color-sea: #3B7A9E;
+  --color-sea-light: #5a9bbd;
+  --color-warm-white: #FAFAF8;
+  --color-text: #2C2C2C;
+  --color-text-light: #6B6B6B;
+  --color-border: #E5E3DF;
+  --radius: 12px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-olive: #5C6B4F;
+  --color-olive-light: #7a8b6a;
+  --color-olive-dark: #4a5740;
+  --color-terra: #C4704E;
+  --color-terra-light: #d4896b;
+  --color-terra-dark: #a85a3a;
+  --color-sea: #3B7A9E;
+  --color-sea-light: #5a9bbd;
+  --color-warm-white: #FAFAF8;
+  --color-text: #2C2C2C;
+  --color-text-light: #6B6B6B;
+  --color-border: #E5E3DF;
+  --font-sans: 'Inter', system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-warm-white);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
+
+/* Page header shared style */
+.page-header {
+  background: linear-gradient(135deg, var(--color-olive), var(--color-sea));
+  color: #fff;
+  padding: 80px 0 40px;
+  text-align: center;
+}
+.page-header h1 { color: #fff; }
+.page-header p { color: rgba(255,255,255,0.8); margin-top: 8px; }
